@@ -10,9 +10,9 @@ terraform {
   }
 }
 
-resource "random_id" "this" {
+resource "random_id" "instance_id" {
   prefix = "i-"
-  length = 8
+  byte_length = 8
 }
 
 resource "random_pet" "hostname" {}

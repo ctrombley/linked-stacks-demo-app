@@ -1,3 +1,13 @@
+variable "account_id" {
+  description = "Cloud provider account ID"
+  type        = string
+}
+
+variable "region" {
+  description = "Cloud provider region"
+  type        = string
+}
+
 variable "staging_vpc_id" {
   type = string
   description = "VPC ID from the staging network stack"
