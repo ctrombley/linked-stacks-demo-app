@@ -27,18 +27,18 @@ upstream_input "network_stack" {
 }
 
 # Publish outputs for downstream stacks
-publish_output "staging_instance_id" {
-  value = deployment.staging.instance_id
+publish_output "app_instance_id" {
+  value = component.app.instance_id
 }
 
-publish_output "staging_hostname" {
-  value = deployment.staging.hostname
+publish_output "app_hostname" {
+  value = component.app.hostname
 }
 
-publish_output "prod_instance_id" {
-  value = deployment.prod.instance_id
+publish_output "ui_instance_id" {
+  value = component.ui.instance_id
 }
 
-publish_output "prod_hostname" {
-  value = deployment.prod.hostname
+publish_output "ui_hostname" {
+  value = component.ui.hostname
 }
