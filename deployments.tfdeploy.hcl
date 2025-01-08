@@ -3,9 +3,9 @@ deployment "staging" {
     account_id = "123456789012"
     region     = "us-west-1"
 
-    vpc_id             = var.vpc_id
-    subnet_private_id  = var.subnet_private_id
-    subnet_public_id   = var.subnet_public_id
+    vpc_id             = upstream_inputs.network_stack.staging_vpc_id
+    subnet_public_id   = upstream_inputs.network_stack.staging_subnet_public_id
+    subnet_private_id  = upstream_inputs.network_stack.staging_subnet_private_id
   }
 }
 
@@ -14,9 +14,9 @@ deployment "prod" {
     account_id = "987654321098"
     region     = "us-west-1"
 
-    vpc_id             = var.vpc_id
-    subnet_private_id  = var.subnet_private_id
-    subnet_public_id   = var.subnet_public_id
+    vpc_id             = upstream_inputs.network_stack.prod_vpc_id
+    subnet_public_id   = upstream_inputs.network_stack.prod_subnet_public_id
+    subnet_private_id  = upstream_inputs.network_stack.prod_subnet_private_id
   }
 }
 
