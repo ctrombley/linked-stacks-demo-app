@@ -15,11 +15,6 @@ provider "random" "this" {}
 component "api" {
   source = "./api"
 
-  inputs = {
-    account_id = var.account_id
-    region = var.region
-  }
-
   providers = {
     random = provider.random.this
   }
@@ -27,11 +22,6 @@ component "api" {
 
 component "ui" {
   source = "./ui"
-
-  inputs = {
-    account_id = var.account_id
-    region = var.region
-  }
 
   providers = {
     random = provider.random.this

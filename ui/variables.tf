@@ -1,8 +1,3 @@
-variable "environment" {
-  description = "Environment name"
-  type = string
-}
-
 variable "account_id" {
   description = "Cloud provider account ID"
   type        = string
