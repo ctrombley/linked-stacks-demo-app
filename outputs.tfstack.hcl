@@ -1,7 +1,7 @@
-output "api_instance_name" {
-  description = "API Instance name"
+output "api_instance_id" {
+  description = "API Instance ID"
   type = string
-  value = component.api.instance_name.hex
+  value = component.api.instance_id.hex
 }
 
 output "api_hostname" {
@@ -10,10 +10,10 @@ output "api_hostname" {
   value = component.api.hostname.id
 }
 
-output "ui_instance_name" {
-  description = "UI instance name"
+output "ui_instance_id" {
+  description = "UI instance ID"
   type = string
-  value = component.ui.instance_name.hex
+  value = component.ui.instance_id.hex
 }
 
 output "ui_hostname" {
