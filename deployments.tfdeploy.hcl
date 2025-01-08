@@ -27,18 +27,34 @@ upstream_input "network_stack" {
 }
 
 # Publish outputs for downstream stacks
-publish_output "prod_instance_id" {
-  value = deployment.prod.instance_id
-}
-
-publish_output "app_hostname" {
-  value = deployment.prod.hostname
-}
-
-publish_output "ui_instance_id" {
+publish_output "staging_api_instance_id" {
   value = deployment.staging.instance_id
 }
 
-publish_output "ui_hostname" {
+publish_output "staging_api_hostname" {
   value = deployment.staging.hostname
+}
+
+publish_output "staging_ui_instance_id" {
+  value = deployment.staging.instance_id
+}
+
+publish_output "staging_ui_hostname" {
+  value = deployment.staging.hostname
+}
+
+publish_output "prod_api_instance_id" {
+  value = deployment.prod.instance_id
+}
+
+publish_output "prod_api_hostname" {
+  value = deployment.prod.hostname
+}
+
+publish_output "prod_ui_instance_id" {
+  value = deployment.prod.instance_id
+}
+
+publish_output "prod_ui_hostname" {
+  value = deployment.prod.hostname
 }
