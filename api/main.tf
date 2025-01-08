@@ -10,7 +10,7 @@ terraform {
   }
 }
 
-resource "random_id" "this" {
+resource "random_id" "instance_id" {
   prefix = "i-"
   length = 8
 }
