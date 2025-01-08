@@ -15,6 +15,14 @@ provider "random" "this" {}
 component "api" {
   source = "./api"
 
+  inputs = {
+    account_id = var.account_id
+    region = var.region
+    vpc_id = var.vpc_id
+    subnet_public_id = var.subnet_public_id
+    subnet_private_id = var.subnet_private_id
+  }
+
   providers = {
     random = provider.random.this
   }
@@ -22,6 +30,14 @@ component "api" {
 
 component "ui" {
   source = "./ui"
+
+  inputs = {
+    account_id = var.account_id
+    region = var.region
+    vpc_id = var.vpc_id
+    subnet_public_id = var.subnet_public_id
+    subnet_private_id = var.subnet_private_id
+  }
 
   providers = {
     random = provider.random.this
