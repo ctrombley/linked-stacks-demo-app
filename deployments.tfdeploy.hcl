@@ -27,16 +27,16 @@ upstream_input "network_stack" {
 }
 
 # Publish outputs for downstream stacks
-publish_output "staging_instance_name" {
-  value = deployment.staging.instance_name
+publish_output "staging_instance_id" {
+  value = deployment.staging.instance_id
 }
 
 publish_output "staging_hostname" {
   value = deployment.staging.hostname
 }
 
-publish_output "prod_instance_name" {
-  value = deployment.prod.instance_name
+publish_output "prod_instance_id" {
+  value = deployment.prod.instance_id
 }
 
 publish_output "prod_hostname" {
