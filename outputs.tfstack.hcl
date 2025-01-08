@@ -1,11 +1,23 @@
-output "instance_name" {
-  description = "Instance name"
+output "api_instance_name" {
+  description = "API Instance name"
   type = string
-  value = random.random_id.instance_name.hex
+  value = component.api.instance_name.hex
 }
 
-output "hostname" {
-  description = "Hostname"
+output "api_hostname" {
+  description = "API Hostname"
   type = string
-  value = random.random_pet.hostname.id
+  value = component.api.hostname.id
+}
+
+output "ui_instance_name" {
+  description = "UI instance name"
+  type = string
+  value = component.ui.instance_name.hex
+}
+
+output "ui_hostname" {
+  description = "UI hostname"
+  type = string
+  value = component.ui.hostname.id
 }
